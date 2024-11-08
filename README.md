@@ -1,16 +1,41 @@
 # busha_app
 
-A new Flutter project.
-
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+After cloning,
 
-A few resources to get you started if this is your first Flutter project:
+### Generate code files by running the following command.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```bash
+flutter pub get
+flutter pub run build_runner build
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Link to an android apk
+--- https://drive.google.com/file/d/1NtBUav8Ew3kmMpWX5mH1oHALTh2YBQy9/view?usp=sharing
+
+### The login screen does not actually make any network calls to verify a user's authenticity, 
+### it actually just verifies that the inputted email is a valid email address and the password 
+### inputted matches a certain criteria
+
+## UI Shots
+<div style="text-align: center">
+  <table>
+    <tr>
+      <td style="text-align: center">
+        <img src="./screenshots/btc_transactions.png" width="1178" />
+      </td>
+      <td style="text-align: center">
+        <img src="./screenshots/home-screen.png" width="200" />
+      </td>
+      <td style="text-align: center">
+        <img src="./screenshots/transaction_detail.png" width="200" />
+      </td>
+    </tr>
+  </table>
+</div>
+
+## License
+
+MIT License
+

@@ -5,6 +5,7 @@ import 'package:busha_app/di/injection.dart';
 import 'package:busha_app/gen/assets.gen.dart';
 import 'package:busha_app/presentation/block_transaction/block_transaction_detail_screen.dart';
 import 'package:busha_app/presentation/block_transaction/cubit/block_transaction_cubit.dart';
+import 'package:busha_app/presentation/components/app_button.dart';
 import 'package:busha_app/presentation/components/text_view.dart';
 import 'package:busha_app/presentation/themes/app_theme.dart';
 import 'package:flutter/material.dart';
@@ -109,7 +110,20 @@ class _BlockTransactionScreenState extends State<BlockTransactionScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    TextView(text: errorMessage),
+                    TextView(
+                      text: errorMessage,
+                      align: TextAlign.center,
+                    ),
+
+                    const SizedBox(height: 24),
+
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: AppButton(
+                        onPressed: () => _cubit.fetchBlockTransactions(widget.coinType),
+                        title: "Try Again",
+                      ),
+                    )
                   ],
                 ),
               );
