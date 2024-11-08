@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 String? emailTextFieldValidator(String? email) {
   if (email == null || email.isEmpty) return "Email cannot be empty";
   if (!isValidEmail(email)) return "Please enter a valid email";

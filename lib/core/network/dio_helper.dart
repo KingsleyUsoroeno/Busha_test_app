@@ -2,16 +2,15 @@ import 'dart:io';
 
 import 'package:busha_app/core/app_exception.dart';
 import 'package:busha_app/core/app_logger.dart';
+import 'package:busha_app/core/network/endpoint.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:injectable/injectable.dart';
 
-typedef ProgressCallback = void Function(int count, int total);
-
 @Singleton()
 class DioClientWrapper {
   Dio _dioClient = Dio(BaseOptions(
-    baseUrl: "https://blockchain.info/",
+    baseUrl: Endpoint.baseUrl,
     connectTimeout: const Duration(minutes: 1),
     receiveTimeout: const Duration(minutes: 1),
     contentType: 'application/json',
@@ -41,8 +40,6 @@ class DioClientWrapper {
     ));
     AppLogger.debug("new base url is ${_dioClient.options.baseUrl}");
   }
-
-  void resetBaseUrl() {}
 
   String _getErrorMessage(DioException exception) {
     final errorMap = exception.response!.data;

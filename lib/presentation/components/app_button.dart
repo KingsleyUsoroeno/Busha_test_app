@@ -1,4 +1,4 @@
-import 'package:busha_app/presentation/shared/components/text_view.dart';
+import 'package:busha_app/presentation/components/text_view.dart';
 import 'package:busha_app/presentation/themes/app_theme.dart';
 import 'package:flutter/material.dart';
 

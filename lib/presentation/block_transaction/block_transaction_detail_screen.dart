@@ -2,7 +2,7 @@ import 'package:busha_app/data/models/local/coin_type.dart';
 import 'package:busha_app/di/injection.dart';
 import 'package:busha_app/gen/assets.gen.dart';
 import 'package:busha_app/presentation/block_transaction/cubit/block_transaction_cubit.dart';
-import 'package:busha_app/presentation/shared/components/text_view.dart';
+import 'package:busha_app/presentation/components/text_view.dart';
 import 'package:busha_app/presentation/themes/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

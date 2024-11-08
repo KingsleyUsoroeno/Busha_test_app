@@ -1,4 +1,5 @@
 import 'package:busha_app/core/network/dio_helper.dart';
+import 'package:busha_app/core/network/endpoint.dart';
 import 'package:busha_app/data/models/local/coin_type.dart';
 import 'package:busha_app/data/models/remote/block_transaction.dart';
 import 'package:busha_app/data/models/remote/tezos_block_transaction.dart';
@@ -12,7 +13,7 @@ class BlockTransactionService {
   BlockTransactionService(this._dioClient);
 
   Future<List<BlockTransaction>> fetchBtcBlockTransactions() async {
-    _dioClient.changeBaseUrl("https://blockchain.info/");
+    _dioClient.changeBaseUrl(Endpoint.baseUrl);
     final latestBlockResponse = await _dioClient.get("latestblock");
     final String hash = latestBlockResponse.data['hash'];
 
@@ -23,18 +24,18 @@ class BlockTransactionService {
   }
 
   Future<List<TezosBlockTransaction>> fetchTezosBlockTransactions() async {
-    _dioClient.changeBaseUrl("https://api.tzkt.io/");
+    _dioClient.changeBaseUrl(Endpoint.tezosBaseUrl);
     final response = await _dioClient.get("v1/blocks");
     return List.from(response.data).map((e) => TezosBlockTransaction.fromJson(e)).toList();
   }
 
   Future<(BlockTransaction?, TezosBlockTransaction?)> fetchBlockByHash(String hash, CoinType coinType) async {
     if (coinType == CoinType.tezos) {
-      _dioClient.changeBaseUrl("https://api.tzkt.io/");
+      _dioClient.changeBaseUrl(Endpoint.tezosBaseUrl);
       final response = await _dioClient.get("v1/blocks/$hash");
       return (null, TezosBlockTransaction.fromJson(response.data));
     } else {
-      _dioClient.changeBaseUrl("https://blockchain.info/");
+      _dioClient.changeBaseUrl(Endpoint.baseUrl);
       AppLogger.debug("hash is $hash");
       final response = await _dioClient.get("rawtx/$hash");
       return (BlockTransaction.fromJson(response.data), null);

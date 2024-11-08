@@ -1,9 +1,9 @@
 import 'package:busha_app/core/validator.dart';
 import 'package:busha_app/gen/assets.gen.dart';
 import 'package:busha_app/presentation/home/home_screen.dart';
-import 'package:busha_app/presentation/shared/components/app_button.dart';
-import 'package:busha_app/presentation/shared/components/custom_text_field.dart';
-import 'package:busha_app/presentation/shared/components/text_view.dart';
+import 'package:busha_app/presentation/components/app_button.dart';
+import 'package:busha_app/presentation/components/custom_text_field.dart';
+import 'package:busha_app/presentation/components/text_view.dart';
 import 'package:busha_app/presentation/themes/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -84,7 +84,6 @@ class _LoginScreenState extends State<LoginScreen> {
                 label: "Password",
                 key: const Key("passwordTextField"),
                 controller: _passwordTextController,
-                enabledTextFieldBorder: false,
                 hintText: "Enter Password",
                 textInputAction: TextInputAction.done,
                 isPasswordField: true,

@@ -5,7 +5,7 @@ import 'package:busha_app/di/injection.dart';
 import 'package:busha_app/gen/assets.gen.dart';
 import 'package:busha_app/presentation/block_transaction/block_transaction_detail_screen.dart';
 import 'package:busha_app/presentation/block_transaction/cubit/block_transaction_cubit.dart';
-import 'package:busha_app/presentation/shared/components/text_view.dart';
+import 'package:busha_app/presentation/components/text_view.dart';
 import 'package:busha_app/presentation/themes/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -67,10 +67,7 @@ class _BlockTransactionScreenState extends State<BlockTransactionScreen> {
                 itemCount: transactions.length,
                 separatorBuilder: (_, __) => const Padding(
                   padding: EdgeInsets.symmetric(vertical: 6),
-                  child: Divider(
-                    color: AppTheme.dividerGrey,
-                    thickness: 2.0,
-                  ),
+                  child: Divider(color: AppTheme.dividerGrey, thickness: 2.0),
                 ),
                 itemBuilder: (_, int index) {
                   final BlockTransaction transaction = transactions[index];
@@ -91,10 +88,7 @@ class _BlockTransactionScreenState extends State<BlockTransactionScreen> {
                 itemCount: transactions.length,
                 separatorBuilder: (_, __) => const Padding(
                   padding: EdgeInsets.symmetric(vertical: 6),
-                  child: Divider(
-                    color: AppTheme.dividerGrey,
-                    thickness: 2.0,
-                  ),
+                  child: Divider(color: AppTheme.dividerGrey, thickness: 2.0),
                 ),
                 itemBuilder: (_, int index) {
                   final TezosBlockTransaction transaction = transactions[index];

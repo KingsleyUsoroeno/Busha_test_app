@@ -1,5 +1,5 @@
 import 'package:busha_app/data/models/local/news_info.dart';
-import 'package:busha_app/presentation/shared/components/text_view.dart';
+import 'package:busha_app/presentation/components/text_view.dart';
 import 'package:busha_app/presentation/themes/app_theme.dart';
 import 'package:flutter/material.dart';
 
@@ -84,13 +84,13 @@ class NewsInfoUi extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top: 10),
+                      padding: const EdgeInsets.only(top: 8),
                       child: Row(
                         children: [
                           TextView(
                             text: newsInfoWrapper.newsHeading.newsPublisher,
                             fontWeight: FontWeight.w400,
-                            fontSize: 14.0,
+                            fontSize: 13.0,
                             color: const Color(0xFF9BA0A5),
                           ),
                           const SizedBox(width: 4),
@@ -106,7 +106,7 @@ class NewsInfoUi extends StatelessWidget {
                           TextView(
                             text: newsInfoWrapper.newsHeading.timeAgo,
                             fontWeight: FontWeight.w400,
-                            fontSize: 14.0,
+                            fontSize: 13.0,
                             color: const Color(0xFF9BA0A5),
                           ),
                         ],

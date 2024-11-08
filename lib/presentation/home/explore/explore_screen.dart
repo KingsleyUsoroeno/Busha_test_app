@@ -5,7 +5,7 @@ import 'package:busha_app/data/models/local/user_asset.dart';
 import 'package:busha_app/gen/assets.gen.dart';
 import 'package:busha_app/presentation/block_transaction/block_transaction_screen.dart';
 import 'package:busha_app/presentation/home/explore/components/my_asset_item.dart';
-import 'package:busha_app/presentation/shared/components/text_view.dart';
+import 'package:busha_app/presentation/components/text_view.dart';
 import 'package:busha_app/presentation/themes/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
