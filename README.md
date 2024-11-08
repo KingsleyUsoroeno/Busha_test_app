@@ -23,13 +23,13 @@ flutter pub run build_runner build
   <table>
     <tr>
       <td style="text-align: center">
-        <img src="./screenshots/btc_transactions.png" width="1178" />
+        <img src="./screenshots/btc_transactions.png" width="500" />
       </td>
       <td style="text-align: center">
-        <img src="./screenshots/home-screen.png" width="200" />
+        <img src="./screenshots/home-screen.png" width="500" />
       </td>
       <td style="text-align: center">
-        <img src="./screenshots/transaction_detail.png" width="200" />
+        <img src="./screenshots/transaction_detail.png" width="500" />
       </td>
     </tr>
   </table>
