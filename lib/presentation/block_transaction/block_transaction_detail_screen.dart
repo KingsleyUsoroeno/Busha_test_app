@@ -2,6 +2,7 @@ import 'package:busha_app/data/models/local/coin_type.dart';
 import 'package:busha_app/di/injection.dart';
 import 'package:busha_app/gen/assets.gen.dart';
 import 'package:busha_app/presentation/block_transaction/cubit/block_transaction_cubit.dart';
+import 'package:busha_app/presentation/components/app_button.dart';
 import 'package:busha_app/presentation/components/text_view.dart';
 import 'package:busha_app/presentation/themes/app_theme.dart';
 import 'package:flutter/material.dart';
@@ -207,7 +208,18 @@ class _BlockTransactionDetailScreenState extends State<BlockTransactionDetailScr
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    TextView(text: errorMessage),
+                    TextView(
+                      text: errorMessage,
+                      align: TextAlign.center,
+                    ),
+                    const SizedBox(height: 24),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: AppButton(
+                        onPressed: () => _cubit.fetchBlockTransactionInfo(widget.hash, widget.coinType),
+                        title: "Try Again",
+                      ),
+                    )
                   ],
                 ),
               );
@@ -225,7 +237,6 @@ class _RowTextWidget extends StatelessWidget {
   final Widget? child;
 
   const _RowTextWidget({
-    super.key,
     required this.title,
     required this.desc,
     this.child,
