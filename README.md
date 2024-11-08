@@ -11,25 +11,27 @@ flutter pub get
 flutter pub run build_runner build
 ```
 
-## Link to an android apk
+## Link to an Android apk
 --- https://drive.google.com/file/d/1NtBUav8Ew3kmMpWX5mH1oHALTh2YBQy9/view?usp=sharing
 
-### The login screen does not actually make any network calls to verify a user's authenticity, 
-### it actually just verifies that the inputted email is a valid email address and the password 
-### inputted matches a certain criteria
+
+
+ The login screen does not make any network calls to verify a user's authenticity, 
+ it just verifies that the inputted email is a valid email address and the password 
+ inputted matches certain criteria
 
 ## UI Shots
 <div style="text-align: center">
   <table>
     <tr>
       <td style="text-align: center">
-        <img src="./screenshots/btc_transactions.png" width="1178" />
+        <img src="./screenshots/home-screen.png" width="500" />
       </td>
       <td style="text-align: center">
-        <img src="./screenshots/home-screen.png" width="200" />
+        <img src="./screenshots/btc_transactions.png" width="500" />
       </td>
       <td style="text-align: center">
-        <img src="./screenshots/transaction_detail.png" width="200" />
+        <img src="./screenshots/transaction_detail.png" width="500" />
       </td>
     </tr>
   </table>
