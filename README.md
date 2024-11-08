@@ -20,16 +20,22 @@ flutter pub run build_runner build
  it just verifies that the inputted email is a valid email address and the password 
  inputted matches certain criteria
 
-## UI Shots
+## Screenshots
 <div style="text-align: center">
   <table>
     <tr>
+      <td style="text-align: center">
+        <img src="./screenshots/login_screen.png" width="500" />
+      </td>
       <td style="text-align: center">
         <img src="./screenshots/home-screen.png" width="500" />
       </td>
       <td style="text-align: center">
         <img src="./screenshots/btc_transactions.png" width="500" />
       </td>
+    </tr>
+
+   <tr>
       <td style="text-align: center">
         <img src="./screenshots/transaction_detail.png" width="500" />
       </td>
